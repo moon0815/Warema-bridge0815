@@ -8,7 +8,7 @@
   "url": "https://github.com/moon0815/Warema-bridge0815",
   "boot": "auto",
   "hassio_api": true,
-  "image": "moon0815/Warema-bridge0815",
+  "image": "giannello/addon-warema-bridge",
   "options": {
     "wms_serial_port": null
   },
