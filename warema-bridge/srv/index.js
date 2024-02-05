@@ -41,7 +41,17 @@ function registerDevice(element) {
         name: element.snr
     }
 
-   // var model
+   var model
+  var payload
+  switch (parseInt(element.type)) {
+    case 6:
+      model = 'Weather station plus'
+      payload = {
+        ...base_payload,
+        device: {
+          ...base_device,
+          model: model
+    // var model
     //var payload
     //switch (parseInt(element.type)) {
       //  case 6:
