@@ -244,8 +244,8 @@ function callback(err, msg) {
             case 'wms-vb-rcv-weather-broadcast':
                 log.silly('Weather broadcast:\n' + JSON.stringify(msg.payload, null, 2))
 
-                if (!devices[msg.payload.weather.snr]) {
-                    registerDevice({snr: msg.payload.weather.snr, type: 63});
+                if (devices[msg.payload.weather.snr]) {
+                    registerDevice({snr: msg.payload.weather.snr, type: 6});
                 }
 
                 client.publish('warema/' + msg.payload.weather.snr + '/illuminance/state', msg.payload.weather.lumen.toString(), {retain: true})
