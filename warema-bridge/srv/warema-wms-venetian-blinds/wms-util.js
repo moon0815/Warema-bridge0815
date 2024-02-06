@@ -313,7 +313,7 @@ function decodeStickCmd(rcv) {
                 break;
             case '7021':
                 msgType = 'scanResponse';
-                params.deviceType = payload.substr(4, 2); //63: Wetterstation, 06: Webcontrol, 02: Stick/software, 20: Zwischenstecker, 21: Aktor UP
+                params.deviceType = payload.substr(4, 2); //06: Wetterstation, 63: Webcontrol, 02: Stick/software, 20: Zwischenstecker, 21: Aktor UP
                 params.deviceTypeStr = "<unknown>";
                 params.panId = payload.substr(0, 4);
                 params.unknown = payload.substr(6); //optional
@@ -330,10 +330,10 @@ function decodeStickCmd(rcv) {
                     case '09':
                         params.deviceTypeStr = 'Web control pro  ';
                         break;
-                    case '20':
+                    case '21':
                         params.deviceTypeStr = 'Actuator UP      ';
                         break;
-                    case '21':
+                    case '20':
                         params.deviceTypeStr = 'Plug receiver    ';
                         break;
                     case '24':
