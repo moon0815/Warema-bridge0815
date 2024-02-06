@@ -330,10 +330,10 @@ function decodeStickCmd(rcv) {
                     case '09':
                         params.deviceTypeStr = 'Web control pro  ';
                         break;
-                    case '21':
+                    case '20':
                         params.deviceTypeStr = 'Actuator UP      ';
                         break;
-                    case '20':
+                    case '21':
                         params.deviceTypeStr = 'Plug receiver    ';
                         break;
                     case '24':
